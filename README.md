@@ -8,6 +8,13 @@
 ```flutter run -d chrome --web-browser-flag "--disable-web-security" ```
 (reffer https://stackoverflow.com/questions/65630743/how-to-solve-flutter-web-api-cors-error-only-with-dart-code )
 
+
+### workflow
+1. ```git switch -c your-branch-name```
+2. make changes to your branch
+3. git commit
+4. publish it
+
 ## Features
 
 - Responsive Instagram UI
