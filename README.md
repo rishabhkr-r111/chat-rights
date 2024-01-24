@@ -1,7 +1,7 @@
 # ChatRights
 
 ### install
-1. git clone ```https://github.com/rishabhkr-r111/chat-rights.git```
+1. ```git clone https://github.com/rishabhkr-r111/chat-rights.git```
 2. ```cd chat-rights```
 3. ```flutter pub get```
 ### Running app (web version)
