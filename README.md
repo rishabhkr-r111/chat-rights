@@ -1,3 +1,13 @@
+# ChatRights
+
+### install
+1. git clone ```https://github.com/rishabhkr-r111/chat-rights.git```
+2. ```cd chat-rights```
+3. ```flutter pub get```
+### Running app (web version)
+```flutter run -d chrome --web-browser-flag "--disable-web-security ``` 
+(reffer ```https://stackoverflow.com/questions/65630743/how-to-solve-flutter-web-api-cors-error-only-with-dart-code```)
+
 ## Features
 
 - Responsive Instagram UI
@@ -10,7 +20,7 @@
 - Display User Posts, Followers & Following
 - EVERYTHING REAL TIME
 - Sign Out
-
+<!--
 ## Installation
 
 After cloning this repository, migrate to `chat-rights` folder. Then, follow the following steps:
@@ -33,4 +43,4 @@ After cloning this repository, migrate to `chat-rights` folder. Then, follow the
 
 **Server**: Firebase Auth, Firebase Storage, Firebase Firestore
 
-**Client**: Flutter, Provider
+**Client**: Flutter, Provider -->
