@@ -5,8 +5,8 @@
 2. ```cd chat-rights```
 3. ```flutter pub get```
 ### Running app (web version)
-```flutter run -d chrome --web-browser-flag "--disable-web-security ``` 
-(reffer ```https://stackoverflow.com/questions/65630743/how-to-solve-flutter-web-api-cors-error-only-with-dart-code```)
+```flutter run -d chrome --web-browser-flag "--disable-web-security" ```
+(reffer https://stackoverflow.com/questions/65630743/how-to-solve-flutter-web-api-cors-error-only-with-dart-code )
 
 ## Features
 
