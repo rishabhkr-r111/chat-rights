@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
               }
             }
 
-            // means connection to future hasnt been made yet     helloooooooooo
+            // means connection to future hasnt been made yet     hello
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),
