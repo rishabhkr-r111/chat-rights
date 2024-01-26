@@ -7,6 +7,8 @@ import 'package:instagram_clone_flutter/screens/login_screen.dart';
 import 'package:instagram_clone_flutter/utils/colors.dart';
 import 'package:instagram_clone_flutter/utils/utils.dart';
 import 'package:instagram_clone_flutter/widgets/follow_button.dart';
+import 'package:instagram_clone_flutter/utils/global_variable.dart';
+import 'package:instagram_clone_flutter/widgets/post_card.dart';
 
 class ProfileScreen extends StatefulWidget {
   final String uid;
@@ -67,6 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return isLoading
         ? const Center(
             child: CircularProgressIndicator(),
@@ -226,11 +229,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             DocumentSnapshot snap =
                                 (snapshot.data! as dynamic).docs[index];
 
-                            return SizedBox(
-                              width: MediaQuery.of(context).size.width,
-                              child: Image(
-                                image: NetworkImage(snap['postUrl']),
-                                fit: BoxFit.cover,
+                            return Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal:
+                                    width > webScreenSize ? width * 0.3 : 0,
+                                vertical: width > webScreenSize ? 15 : 0,
+                              ),
+                              child: PostCard(
+                                snap: snap,
                               ),
                             );
                           },
