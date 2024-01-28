@@ -82,7 +82,7 @@ class _PostCardState extends State<PostCard> {
           Container(
             padding: const EdgeInsets.symmetric(
               vertical: 4,
-              horizontal: 16,
+              horizontal: 8,
             ).copyWith(right: 0),
             child: Row(
               children: <Widget>[
@@ -155,6 +155,27 @@ class _PostCardState extends State<PostCard> {
               ],
             ),
           ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.only(
+              top: 8,
+              left: 8,
+              bottom: 8,
+            ),
+            child: RichText(
+              text: TextSpan(
+                style: const TextStyle(color: primaryColor),
+                children: [
+                  TextSpan(
+                      text: ' ${widget.snap['description']}',
+                      style: const TextStyle(
+                        fontSize: 15,
+                        color: primaryColor,
+                      )),
+                ],
+              ),
+            ),
+          ),
           // IMAGE SECTION OF THE POST
           GestureDetector(
             onDoubleTap: () {
@@ -210,11 +231,12 @@ class _PostCardState extends State<PostCard> {
                 child: IconButton(
                   icon: widget.snap['likes'].contains(user.uid)
                       ? const Icon(
-                          Icons.favorite,
-                          color: Colors.red,
+                          Icons.arrow_upward_rounded,
+                          color: Colors.green,
+                          weight: 100.0,
                         )
                       : const Icon(
-                          Icons.favorite_border,
+                          Icons.arrow_upward_rounded,
                         ),
                   onPressed: () => FireStoreMethods().likePost(
                     widget.snap['postId'].toString(),
@@ -251,6 +273,7 @@ class _PostCardState extends State<PostCard> {
           //DESCRIPTION AND NUMBER OF COMMENTS
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
+            width: double.infinity,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -264,28 +287,6 @@ class _PostCardState extends State<PostCard> {
                       '${widget.snap['likes'].length} likes',
                       style: Theme.of(context).textTheme.bodyMedium,
                     )),
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.only(
-                    top: 8,
-                  ),
-                  child: RichText(
-                    text: TextSpan(
-                      style: const TextStyle(color: primaryColor),
-                      children: [
-                        TextSpan(
-                          text: widget.snap['username'].toString(),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: ' ${widget.snap['description']}',
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
                 InkWell(
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 4),
