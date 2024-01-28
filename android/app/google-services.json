@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:230083713323:android:6002e49804f7e212534d6e",
+        "android_client_info": {
+          "package_name": "com.chatrights.ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJen8VmQR_VkVnwks5lNjHJppSbiruRC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:230083713323:android:6b48d3c63d62cf08534d6e",
         "android_client_info": {
           "package_name": "com.example.instagram_clone_flutter"
