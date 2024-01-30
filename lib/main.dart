@@ -9,19 +9,21 @@ import 'package:chat_rights/responsive/web_screen_layout.dart';
 import 'package:chat_rights/screens/login_screen.dart';
 import 'package:chat_rights/utils/colors.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
+  await dotenv.load(fileName: "lib/.env");
   WidgetsFlutterBinding.ensureInitialized();
-
   // initialise app based on platform- web or mobile
   if (kIsWeb) {
     await Firebase.initializeApp(
-      options: const FirebaseOptions(
-          apiKey: "AIzaSyC7aGzvMs5J4XB51CyAneboHm-ftW7DFVs",
-          appId: "1:230083713323:web:c0a0c068d4e37cd2534d6e",
-          messagingSenderId: "230083713323",
-          projectId: "chatrights",
-          storageBucket: 'chatrights.appspot.com'),
+      options: FirebaseOptions(
+        apiKey: dotenv.env['apiKey']!,
+        appId: dotenv.env['appId']!,
+        messagingSenderId: dotenv.env['messagingSenderId']!,
+        projectId: dotenv.env['projectId']!,
+        storageBucket: dotenv.env['storageBucket']!,
+      ),
     );
   } else {
     await Firebase.initializeApp();

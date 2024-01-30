@@ -32,8 +32,8 @@
 /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
-
+.env
+/lib/.env
 # Symbolication related
 app.*.symbols
 
