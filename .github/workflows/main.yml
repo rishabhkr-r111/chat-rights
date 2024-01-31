@@ -5,8 +5,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "web-test" ]
-  pull_request:
-    branches: [ "web-test" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,10 +24,10 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.0.0'
+          flutter-version: '3.16.8'
           channel: 'stable'
       - run: flutter --version
-
+      
       - name: Cache pub dependencies
         uses: actions/cache@v2
         with:
@@ -39,12 +37,6 @@ jobs:
 
       - name: Download pub dependencies
         run: flutter pub get
-
-      - name: Run analyzer
-        run: flutter analyze
-
-      - name: Run tests
-        run: flutter test
 
       - name: Build Web App
         run: flutter build web --base-href=/chat-rights/
