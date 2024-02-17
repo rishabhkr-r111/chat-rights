@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:chat_rights/utils/colors.dart';
 import 'package:chat_rights/utils/global_variable.dart';
-import 'package:chat_rights/screens/rights_lists_screen.dart';
 
-class AiChatScreen extends StatefulWidget {
-  const AiChatScreen({Key? key}) : super(key: key);
+class RightsListsScreen extends StatefulWidget {
+  const RightsListsScreen({Key? key}) : super(key: key);
 
   @override
-  State<AiChatScreen> createState() => _AiChatScreenState();
+  State<RightsListsScreen> createState() => _RightsListsScreen();
 }
 
-class _AiChatScreenState extends State<AiChatScreen> {
+class _RightsListsScreen extends State<RightsListsScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -28,24 +27,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   color: primaryColor,
                   height: 32,
                 ),
-                actions: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.policy,
-                      color: primaryColor,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const RightsListsScreen()),
-                      );
-                    },
-                  ),
-                ],
               ),
         body: Container(
-          child: Text('AI-Chat-Screen'),
+          child: Text('rights list'),
         ));
   }
 }

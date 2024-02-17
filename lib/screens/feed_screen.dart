@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:chat_rights/utils/colors.dart';
 import 'package:chat_rights/utils/global_variable.dart';
 import 'package:chat_rights/widgets/post_card.dart';
+import 'package:chat_rights/screens/rights_lists_screen.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -33,10 +34,16 @@ class _FeedScreenState extends State<FeedScreen> {
               actions: [
                 IconButton(
                   icon: const Icon(
-                    Icons.messenger_outline,
+                    Icons.policy,
                     color: primaryColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RightsListsScreen()),
+                    );
+                  },
                 ),
               ],
             ),
