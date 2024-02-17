@@ -20,6 +20,16 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ChatManager chatManager = ChatManager();
 
   @override
+  void initState() {
+    chatManager.initializeWebsocket();
+    chatManager.channel.stream.listen((event) {
+      chatManager.onMessageReceived(event);
+      setState(() {});
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
