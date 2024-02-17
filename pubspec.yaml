@@ -42,6 +42,12 @@ dependencies:
   uuid: ^3.0.5
   photo_view: ^0.14.0
   flutter_dotenv: ^5.1.0
+  flutter_chat_types: ^3.6.2
+  flutter_chat_ui:
+
+  # api
+  http: ">=0.13.6 <2.0.0"
+  web_socket_channel: ^2.4.0
 
 dev_dependencies:
   change_app_package_name: ^1.1.0
