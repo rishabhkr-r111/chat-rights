@@ -5,7 +5,8 @@ import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:chat_rights/utils/global_variable.dart';
 import 'package:chat_rights/utils/chat_mannager.dart';
 import 'package:chat_rights/screens/rights_lists_screen.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 
@@ -46,29 +47,33 @@ class _AiChatScreenState extends State<AiChatScreen> {
       }
     }
 
-    void handleImageSelection() async {
-      final result = await ImagePicker().pickImage(
-        imageQuality: 70,
-        maxWidth: 1440,
-        source: ImageSource.gallery,
+    void handlePdfSelection() async {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf'],
+        allowMultiple: false,
       );
 
       if (result != null) {
-        final bytes = await result.readAsBytes();
-        final image = await decodeImageFromList(bytes);
+        PlatformFile file = result.files.first;
 
-        final message = types.ImageMessage(
+        final PdfDocument pdf = PdfDocument(inputBytes: file.bytes);
+        String message = PdfTextExtractor(pdf).extractText();
+        pdf.dispose();
+
+        final textMessage = types.FileMessage(
           author: chatManager.user,
           createdAt: DateTime.now().millisecondsSinceEpoch,
-          height: image.height.toDouble(),
           id: const Uuid().v4(),
-          name: result.name,
-          size: bytes.length,
-          uri: result.path,
-          width: image.width.toDouble(),
+          name: file.name,
+          size: file.size,
+          uri: file.path ?? '',
         );
 
-        chatManager.addMessage(message);
+        chatManager.addMessage(textMessage, filedata: message);
+        setState(() {});
+      } else {
+        // todo -> handel canceled
       }
     }
 
@@ -103,7 +108,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
             ),
       body: Chat(
         messages: chatManager.messages,
-        onAttachmentPressed: handleImageSelection,
+        onAttachmentPressed: handlePdfSelection,
         onSendPressed: handleSendPressed,
         showUserAvatars: false,
         showUserNames: true,
@@ -114,7 +119,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
           receivedMessageBodyTextStyle: TextStyle(color: Colors.white),
           secondaryColor: Color(0xFF1c1c1c),
           attachmentButtonIcon: Icon(
-            Icons.camera_alt_outlined,
+            Icons.document_scanner,
             color: Colors.white,
           ),
           inputBackgroundColor: Color(0xFF1c1c1c),

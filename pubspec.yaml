@@ -48,6 +48,9 @@ dependencies:
   # api
   http: ">=0.13.6 <2.0.0"
   web_socket_channel: ^2.4.0
+  # pdf
+  file_picker: ^6.1.1
+  syncfusion_flutter_pdf: ^24.2.6
 
 dev_dependencies:
   change_app_package_name: ^1.1.0

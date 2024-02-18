@@ -16,7 +16,7 @@ class ChatManager {
         Uri.parse('wss://api-chat-rights-35jloclotq-el.a.run.app/ws'));
   }
 
-  void addMessage(types.Message message) {
+  void addMessage(types.Message message, {dynamic filedata}) {
     messages.insert(0, message);
     isLoading = true;
     if (message is types.TextMessage) {
@@ -28,6 +28,18 @@ class ChatManager {
             createdAt: DateTime.now().millisecondsSinceEpoch,
             id: const Uuid().v4(),
             text: "",
+          ));
+    }
+
+    if (message is types.FileMessage) {
+      channel.sink.add(filedata);
+      messages.insert(
+          0,
+          types.TextMessage(
+            author: bot,
+            createdAt: DateTime.now().millisecondsSinceEpoch,
+            id: const Uuid().v4(),
+            text: "Processing file...",
           ));
     }
   }
