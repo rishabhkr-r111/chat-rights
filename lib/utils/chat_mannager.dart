@@ -10,18 +10,18 @@ class ChatManager {
   final user = const types.User(
     id: 'user',
   );
-  final bot = const types.User(id: 'model', firstName: 'Gemini');
+  final bot = const types.User(id: 'model', firstName: 'Chat Assistant');
   bool isLoading = false;
   late WebSocketChannel channel;
 
   void initializeWebsocket() {
     if (kIsWeb) {
       channel = HtmlWebSocketChannel.connect(
-        Uri.parse('ws://localhost:8000/ws'),
+        Uri.parse('wss://api-chat-rights-35jloclotq-el.a.run.app/ws'),
       );
     } else {
       channel = IOWebSocketChannel.connect(
-        Uri.parse('ws://localhost:8000/ws'),
+        Uri.parse('wss://api-chat-rights-35jloclotq-el.a.run.app/ws'),
       );
     }
   }
