@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:chat_rights/utils/colors.dart';
@@ -67,7 +68,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
           id: const Uuid().v4(),
           name: file.name,
           size: file.size,
-          uri: file.path ?? '',
+          uri: (kIsWeb) ? "" : file.path!,
         );
 
         chatManager.addMessage(textMessage, filedata: message);
