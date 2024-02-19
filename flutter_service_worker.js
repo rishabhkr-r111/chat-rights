@@ -16,11 +16,11 @@ const RESOURCES = {"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2e
 "canvaskit/chromium/canvaskit.wasm": "143af6ff368f9cd21c863bfa4274c406",
 "canvaskit/chromium/canvaskit.js": "0ae8bbcc58155679458a0f7a00f66873",
 "canvaskit/canvaskit.js": "eb8797020acdbdf96a12fb0405582c1b",
-"index.html": "addbaa4502df101eca2fa53b3d50f026",
-"/": "addbaa4502df101eca2fa53b3d50f026",
+"index.html": "74bca5968f8a54c53173942a8d91449e",
+"/": "74bca5968f8a54c53173942a8d91449e",
 "flutter.js": "7d69e653079438abfbb24b82a655b0a4",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"main.dart.js": "04f60da2505a7c1eb01669bd25273584",
+"main.dart.js": "bf80188f39c61fa0af8008cd8188f366",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
 "assets/packages/flutter_chat_ui/assets/3.0x/icon-arrow.png": "3ea423a6ae14f8f6cf1e4c39618d3e4b",
 "assets/packages/flutter_chat_ui/assets/3.0x/icon-send.png": "8e7e62d5bc4a0e37e3f953fb8af23d97",
@@ -47,9 +47,9 @@ const RESOURCES = {"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2e
 "assets/shaders/ink_sparkle.frag": "4096b5150bac93c41cbc9b45276bd90f",
 "assets/AssetManifest.json": "3043dcb796e64d8431025b454be08475",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "24e9b13964c2150ed27d601ca39e9d5d",
+"assets/fonts/MaterialIcons-Regular.otf": "436077ab5b0d81223ecf4f2bf5bdd598",
 "assets/AssetManifest.bin.json": "ba4d53d59a7013cf59dac7d00983e263",
-"assets/NOTICES": "db5d607b8aebae77526e4e4200982a1f",
+"assets/NOTICES": "f0dfb9b08557ea1dbf2ec816e861bd2c",
 "assets/assets/chatrights.svg": "aa06519cbf53e19fb7f09235165d5292"};
 // The application shell files that are downloaded before a service worker can
 // start.
