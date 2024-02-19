@@ -13,6 +13,7 @@ class ChatManager {
 
   void initializeWebsocket() {
     channel = WebSocketChannel.connect(
+        //wss://api-chat-rights-35jloclotq-el.a.run.app
         Uri.parse('wss://api-chat-rights-35jloclotq-el.a.run.app/ws'));
   }
 
@@ -20,8 +21,7 @@ class ChatManager {
     messages.insert(0, message);
     isLoading = true;
     if (message is types.TextMessage) {
-      channel.sink.add("Summary in 100 words:" +
-          message.text); // sending text message to the backend api
+      channel.sink.add(message.text);
       messages.insert(
           0,
           types.TextMessage(
@@ -33,14 +33,15 @@ class ChatManager {
     }
 
     if (message is types.FileMessage) {
-      channel.sink.add(filedata);
+      String prompt = "give summary of in 100 words :";
+      channel.sink.add(prompt + filedata);
       messages.insert(
           0,
           types.TextMessage(
             author: bot,
             createdAt: DateTime.now().millisecondsSinceEpoch,
             id: const Uuid().v4(),
-            text: "Processing file...",
+            text: "Processing file... \n",
           ));
     }
   }

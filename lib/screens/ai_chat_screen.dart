@@ -10,6 +10,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'dart:io';
+import 'dart:typed_data';
 
 class AiChatScreen extends StatefulWidget {
   const AiChatScreen({Key? key}) : super(key: key);
@@ -58,7 +60,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
       if (result != null) {
         PlatformFile file = result.files.first;
 
-        final PdfDocument pdf = PdfDocument(inputBytes: file.bytes);
+        Uint8List? bytes;
+        if (!kIsWeb) {
+          bytes = await File(file.path!).readAsBytes();
+        } else {
+          bytes = file.bytes;
+        }
+
+        final PdfDocument pdf = PdfDocument(inputBytes: bytes);
         String message = PdfTextExtractor(pdf).extractText();
         pdf.dispose();
 
