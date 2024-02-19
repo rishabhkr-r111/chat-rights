@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:chat_rights/utils/colors.dart';
+import 'package:chat_rights/utils/global_variable.dart';
 
 // Dummy data for Indian laws
 final List<Map<String, String>> indianLawsList = [
@@ -26,10 +28,10 @@ class RightsListsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: mobileBackgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[900],
-        title: Text('Rights List', style: TextStyle(color: Colors.white)),
+        title: const Text('Browse Rights'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -52,7 +54,7 @@ class RightsListsScreen extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
               color: Colors.white,
