@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:chat_rights/utils/colors.dart';
 import 'package:chat_rights/utils/global_variable.dart';
+import 'package:chat_rights/screens/results_screen.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-// Dummy data for Indian laws
 final List<Map<String, String>> indianLawsList = [
-  {"name": "Union of India-Act", "year": "1947"},
-  {"name": "Constitution and Amendments", "year": "1950"},
-  {"name": "United Nations Conventions", "year": "1945"},
-  {"name": "International Treaty- Act", "year": "1969"},
+  {"name": "Union of India-Act", "url": "union-act"},
+  {"name": "Constitution and Amendments", "url": "constitution-amendments"},
+  {"name": "United Nations Conventions", "url": "un-convention"},
+  {"name": "International Treaty- Act", "url": "treaty-act"},
 ];
 
-// Dummy data for state laws
 final List<Map<String, String>> stateLawsList = [
-  {"name": "State of Andhra Pradesh - Act", "year": "1956"},
+  {"name": "State of Andhra Pradesh - Act", "url": "andhra-act"},
   // Add more state laws as needed
 ];
 
-// Dummy data for British laws
 final List<Map<String, String>> britishLawsList = [
-  {"name": "British India - Act", "year": "1858"},
+  {"name": "British India - Act", "url": "british-act"},
   // Add more British laws as needed
 ];
 
@@ -103,64 +103,62 @@ class RightsListsScreen extends StatelessWidget {
           color: Colors.white,
         ),
         onTap: () {
-          _showYearDialog(context, law["name"]!, law["year"]!);
+          _showYearPopup(context, law["url"]!);
         },
       ),
     );
   }
 
-  void _showYearDialog(BuildContext context, String lawName, String year) {
+  void _showYearPopup(BuildContext context, String lawName) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        String selectedYear = year;
-        return StatefulBuilder(
-          builder: (BuildContext context, StateSetter setState) {
-            return AlertDialog(
-              backgroundColor: Colors.blueGrey[900],
-              title: Text(
-                lawName,
-                style: TextStyle(color: Colors.white),
-              ),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Select Year:',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  SizedBox(height: 10),
-                  DropdownButton<String>(
-                    dropdownColor: Colors.blueGrey[800],
-                    value: selectedYear,
-                    style: TextStyle(color: Colors.white),
-                    onChanged: (String? newValue) {
-                      setState(() {
-                        selectedYear = newValue!;
-                      });
-                    },
-                    items: List.generate(
-                      100,
-                      (index) => DropdownMenuItem(
-                        value: (1900 + index).toString(),
-                        child: Text((1900 + index).toString()),
-                      ),
+        return FutureBuilder(
+          future: http.get(Uri.parse('http://localhost:8080/years/$lawName')),
+          builder:
+              (BuildContext context, AsyncSnapshot<http.Response> snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
+                return AlertDialog(
+                  title: Text('Error'),
+                  content: Text('${snapshot.error}'),
+                );
+              } else {
+                List<String> years =
+                    (jsonDecode(snapshot.data!.body) as List<dynamic>)
+                        .cast<String>();
+                return AlertDialog(
+                  title: Text(lawName),
+                  content: Container(
+                    width: double.maxFinite,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: years.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          title: Text(years[index]),
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResultsPage(
+                                    lawName: lawName,
+                                    year: "1-1-" + years[index]),
+                              ),
+                            );
+                          },
+                        );
+                      },
                     ),
                   ),
-                ],
-              ),
-              actions: <Widget>[
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Text(
-                    'Close',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ],
-            );
+                );
+              }
+            } else {
+              return AlertDialog(
+                title: Text('Loading ...'),
+              );
+            }
           },
         );
       },

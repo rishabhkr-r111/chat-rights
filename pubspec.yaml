@@ -51,6 +51,8 @@ dependencies:
   # pdf
   file_picker: ^6.1.1
   syncfusion_flutter_pdf: ^24.2.6
+  webview_flutter: ^4.7.0
+  url_launcher: ^6.2.4
 
 dev_dependencies:
   change_app_package_name: ^1.1.0
