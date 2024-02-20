@@ -114,7 +114,8 @@ class RightsListsScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return FutureBuilder(
-          future: http.get(Uri.parse('http://localhost:8080/years/$lawName')),
+          future: http.get(Uri.parse(
+              'https://api-chat-rights-35jloclotq-el.a.run.app/years/$lawName')),
           builder:
               (BuildContext context, AsyncSnapshot<http.Response> snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {

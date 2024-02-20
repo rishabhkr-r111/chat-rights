@@ -34,16 +34,15 @@ class _ResultsPageState extends State<ResultsPage> {
   void initState() {
     super.initState();
     futureResponse = http.get(Uri.parse(
-        'http://localhost:8080/advsearch/?query=${widget.lawName}&fromdate=${widget.year}'));
+        'https://api-chat-rights-35jloclotq-el.a.run.app/advsearch/?query=${widget.lawName}&fromdate=${widget.year}'));
   }
 
   @override
   Widget build(BuildContext context) {
-    void launchURL(String url) async {
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw 'Could not launch $url';
+    void launchURL(String urll) async {
+      Uri url = Uri.parse(urll);
+      if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
       }
     }
 
