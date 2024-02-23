@@ -8,6 +8,8 @@
 
 ### Web Version
 https://rishabhkr-r111.github.io/chat-rights
+### APK Download
+https://github.com/rishabhkr-r111/chat-rights/releases/tag/%23release
 ### Demo Account
 Email : demo-acc@gmail.com
 
