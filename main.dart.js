@@ -55471,8 +55471,8 @@ l===$&&A.a()
 l=A.aZz($.aVY(),l,n.gQo(),m)
 s=n.d
 r=A.Ri(B.i,A.i4(B.qv,s===0?B.i:B.aO,m,m),"")
-q=A.Ri(B.i,A.i4(B.qz,s===1?B.i:B.aO,m,m),"")
-p=A.Ri(B.i,A.i4(B.Np,s===2?B.i:B.aO,m,m),"")
+q=A.Ri(B.i,A.i4(B.kX,s===1?B.i:B.aO,m,m),"")
+p=A.Ri(B.i,A.i4(B.qu,s===2?B.i:B.aO,m,m),"")
 o=A.Ri(B.i,A.i4(B.qA,s===3?B.i:B.aO,m,m),"")
 return A.lB(m,m,l,new A.Sx(A.b([r,q,p,o,A.Ri(B.i,A.i4(B.qy,s===4?B.i:B.aO,m,m),"")],t.ur),n.gaHX(),n.d,B.m,m),m)}}
 A.aIa.prototype={
@@ -55511,7 +55511,7 @@ rQ(a){var s=this.e
 s===$&&A.a()
 s.a5Z(a)
 this.a8(new A.aN2(this,a))},
-L(a){var s=this,r=null,q=A.a_D("assets/chatrights.svg",B.i,32),p=s.d,o=A.fX(r,r,A.i4(B.qv,p===0?B.i:B.aO,r,r),r,new A.aMY(s),r,r,r,r),n=A.fX(r,r,A.i4(B.kX,p===1?B.i:B.aO,r,r),r,new A.aMZ(s),r,r,r,r),m=A.fX(r,r,A.i4(B.qA,p===2?B.i:B.aO,r,r),r,new A.aN_(s),r,r,r,r),l=A.fX(r,r,A.i4(B.qu,p===3?B.i:B.aO,r,r),r,new A.aN0(s),r,r,r,r)
+L(a){var s=this,r=null,q=A.a_D("assets/chatrights.svg",B.i,32),p=s.d,o=A.fX(r,r,A.i4(B.qv,p===0?B.i:B.aO,r,r),r,new A.aMY(s),r,r,r,r),n=A.fX(r,r,A.i4(B.kX,p===1?B.i:B.aO,r,r),r,new A.aMZ(s),r,r,r,r),m=A.fX(r,r,A.i4(B.qu,p===2?B.i:B.aO,r,r),r,new A.aN_(s),r,r,r,r),l=A.fX(r,r,A.i4(B.qA,p===3?B.i:B.aO,r,r),r,new A.aN0(s),r,r,r,r)
 q=A.pQ(A.b([o,n,m,l,A.fX(r,r,A.i4(B.qy,p===4?B.i:B.aO,r,r),r,new A.aN1(s),r,r,r,r)],t.p),B.m,!1,r,q)
 o=s.e
 o===$&&A.a()
@@ -56365,7 +56365,7 @@ return new A.z2(s.i(a,"title"),s.i(a,"href"))},
 $S:695}
 A.aKk.prototype={
 $2(a,b){var s=null,r=A.afL(50,65,85,0.9),q=this.a
-return A.aWM(A.ba(s,A.aoD(new A.av(10,0,10,0),A.ba(s,A.i4(B.Nw,B.i,s,s),B.k,s,s,new A.d9(s,s,new A.eg(B.p,new A.bs(B.HA,1,B.A,-1),B.p,B.p),s,s,s,B.an),s,s,s,new A.av(0,0,12,0),s,s,s),new A.aKi(this.b,q,b),A.bV(q[b].a,s,s,s,A.ii(s,s,B.i,s,s,s,s,s,s,s,s,s,s,s,B.bF,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s),A.i4(B.Nq,B.i,s,30)),B.k,s,s,new A.d9(r,s,s,s,s,s,B.an),s,s,s,s,s,s,s),s,2,new A.av(8,4,8,4))},
+return A.aWM(A.ba(s,A.aoD(new A.av(10,0,10,0),A.ba(s,A.i4(B.Nv,B.i,s,s),B.k,s,s,new A.d9(s,s,new A.eg(B.p,new A.bs(B.HA,1,B.A,-1),B.p,B.p),s,s,s,B.an),s,s,s,new A.av(0,0,12,0),s,s,s),new A.aKi(this.b,q,b),A.bV(q[b].a,s,s,s,A.ii(s,s,B.i,s,s,s,s,s,s,s,s,s,s,s,B.bF,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s),A.i4(B.Np,B.i,s,30)),B.k,s,s,new A.d9(r,s,s,s,s,s,B.an),s,s,s,s,s,s,s),s,2,new A.av(8,4,8,4))},
 $S:675}
 A.aKi.prototype={
 $0(){this.a.$1("https://indiankanoon.org"+this.b[this.c].b)},
@@ -56378,7 +56378,7 @@ return A.ba(s,A.eh(A.b([A.bV(a,s,s,s,B.a3_,s,s,s,s),A.f4(s,12,s),A.z9(new A.avz(
 aiC(a,b,c){var s=null,r=b.i(0,"name")
 r.toString
 r=A.bV(r,s,s,s,A.ii(s,s,B.i,s,s,s,s,s,s,s,s,18,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s)
-return A.aWM(A.aoD(s,A.tA(B.p5,s,A.bV(""+c,s,s,s,A.ii(s,s,B.i,s,s,s,s,s,s,s,s,s,s,s,B.bF,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s),s),new A.avy(this,a,b),r,A.i4(B.Nr,B.i,s,s)),B.Ig,2,new A.av(0,8,0,8))},
+return A.aWM(A.aoD(s,A.tA(B.p5,s,A.bV(""+c,s,s,s,A.ii(s,s,B.i,s,s,s,s,s,s,s,s,s,s,s,B.bF,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s),s),new A.avy(this,a,b),r,A.i4(B.Nq,B.i,s,s)),B.Ig,2,new A.av(0,8,0,8))},
 awq(a,b){A.aQa(new A.avE(b),a,!0,t.z)}}
 A.avz.prototype={
 $2(a,b){return this.a.aiC(a,this.b[b],b+1)},
@@ -65230,7 +65230,7 @@ A.afH.prototype={
 $1(a){return a==null?null:a.b},
 $S:87}
 A.afI.prototype={
-$1(a){return B.Nu},
+$1(a){return B.Nt},
 $S:88}
 A.afJ.prototype={
 $1(a){return"Close"},
@@ -107696,7 +107696,7 @@ else s=!0
 return s},
 gu(a){return B.c.gu(this.a)}}
 A.Xn.prototype={
-L(a){return A.tN(A.he(A.i4(B.Nt,B.ph,null,40),null,null),this.c,B.cy)}}
+L(a){return A.tN(A.he(A.i4(B.Ns,B.ph,null,40),null,null),this.c,B.cy)}}
 A.Xo.prototype={
 L(a){var s=null,r=this.c,q=r==null,p=q?s:r.b,o=q?s:r.a
 return A.he(A.ba(s,A.RF(s,s,4,o!=null&&p!=null?o/p:s,s),B.k,s,s,s,s,20,s,s,s,s,20),s,s)}}
@@ -129552,8 +129552,8 @@ B.cy=new A.SN(0,"background")
 B.pJ=new A.SN(1,"foreground")
 B.dO=new A.Ew(!1)
 B.Ls=new A.Ew(!0)
-B.Nv=new A.dO(57842,!1)
-B.NN=new A.fG(B.Nv,null,null,B.i,null,null)
+B.Nu=new A.dO(57842,!1)
+B.NN=new A.fG(B.Nu,null,null,B.i,null,null)
 B.Mh=new A.av(0,16,0,32)
 B.a2C=new A.q(!0,B.hi,null,null,null,null,16,B.O,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.p2=new A.G(4280032284)
@@ -129840,27 +129840,26 @@ B.cg=new A.FD(0,"deferToChild")
 B.aN=new A.FD(1,"opaque")
 B.ch=new A.FD(2,"translucent")
 B.Nn=new A.qj(null)
-B.Np=new A.dO(57423,!1)
+B.qu=new A.dO(57423,!1)
 B.kW=new A.dO(57490,!0)
-B.Nq=new A.dO(57499,!0)
-B.Nr=new A.dO(57500,!0)
-B.Nt=new A.dO(57616,!1)
-B.Nu=new A.dO(57706,!1)
-B.Nw=new A.dO(57849,!1)
-B.qu=new A.dO(57947,!1)
+B.Np=new A.dO(57499,!0)
+B.Nq=new A.dO(57500,!0)
+B.Ns=new A.dO(57616,!1)
+B.Nt=new A.dO(57706,!1)
+B.Nv=new A.dO(57849,!1)
 B.qv=new A.dO(58136,!1)
 B.qw=new A.dO(58332,!1)
 B.qx=new A.dO(58372,!1)
 B.qy=new A.dO(58513,!1)
-B.qz=new A.dO(58585,!1)
-B.kX=new A.dO(58727,!1)
+B.kX=new A.dO(58585,!1)
 B.qA=new A.dO(61894,!1)
 B.NA=new A.dD(null,null,null,null,null,B.m,null,null)
 B.kZ=new A.dD(24,0,400,0,48,B.m,1,null)
 B.NB=new A.dD(null,null,null,null,null,B.i,null,null)
 B.Ny=new A.dO(59029,!1)
 B.NC=new A.fG(B.Ny,null,null,null,null,null)
-B.ND=new A.fG(B.kX,null,null,B.i,null,null)
+B.qz=new A.dO(58727,!1)
+B.ND=new A.fG(B.qz,null,null,B.i,null,null)
 B.NE=new A.fG(B.qx,null,null,null,null,null)
 B.Nx=new A.dO(58737,!0)
 B.NF=new A.fG(B.Nx,null,null,null,null,null)
@@ -129869,7 +129868,8 @@ B.NG=new A.fG(B.Nz,null,null,null,null,null)
 B.No=new A.dO(57416,!1)
 B.NH=new A.fG(B.No,null,null,null,null,null)
 B.NI=new A.fG(B.kW,null,null,null,null,null)
-B.NJ=new A.fG(B.qu,16,null,null,null,null)
+B.Nw=new A.dO(57947,!1)
+B.NJ=new A.fG(B.Nw,16,null,null,null,null)
 B.kY=new A.dO(62846,!1)
 B.JP=new A.G(4293457385)
 B.Jv=new A.G(4291356361)
@@ -129885,10 +129885,10 @@ B.TS=new A.cr([50,B.JP,100,B.Jv,200,B.Je,300,B.IV,400,B.IF,500,B.Iw,600,B.Io,700
 B.UR=new A.uM(B.TS,4283215696)
 B.NK=new A.fG(B.kY,null,100,B.UR,null,null)
 B.NL=new A.fG(B.kY,null,null,null,null,null)
-B.NM=new A.fG(B.kX,null,null,null,null,null)
-B.NO=new A.fG(B.qz,null,null,B.i,null,null)
-B.Ns=new A.dO(57588,!1)
-B.NP=new A.fG(B.Ns,null,null,null,null,null)
+B.NM=new A.fG(B.qz,null,null,null,null,null)
+B.NO=new A.fG(B.kX,null,null,B.i,null,null)
+B.Nr=new A.dO(57588,!1)
+B.NP=new A.fG(B.Nr,null,null,null,null,null)
 B.NQ=new A.fG(B.kY,200,null,B.i,null,null)
 B.qB=new A.yN(null,null,null,null,null,null)
 B.iq=new A.ve("covered",1)
