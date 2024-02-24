@@ -52,9 +52,7 @@ class MyApp extends StatelessWidget {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.active) {
-              // Checking if the snapshot has any data or not
               if (snapshot.hasData) {
-                // if snapshot has data which means user is logged in then we check the width of screen and accordingly display the screen layout
                 return const ResponsiveLayout(
                   mobileScreenLayout: MobileScreenLayout(),
                   webScreenLayout: WebScreenLayout(),
@@ -66,7 +64,6 @@ class MyApp extends StatelessWidget {
               }
             }
 
-            // means connection to future hasnt been made yet     hello
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),
@@ -80,4 +77,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//hithere ho are you
