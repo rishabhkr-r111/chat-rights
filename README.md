@@ -1,6 +1,6 @@
 # ChatRights
 
-### install
+### Run Locally
 1. ```git clone https://github.com/rishabhkr-r111/chat-rights.git```
 2. ```cd chat-rights```
 3. ```flutter pub get```
@@ -8,6 +8,8 @@
 
 ### Web Version
 https://rishabhkr-r111.github.io/chat-rights
+### APK Download
+https://github.com/rishabhkr-r111/chat-rights/releases/tag/%23release
 ### Demo Account
 Email : demo-acc@gmail.com
 
@@ -27,6 +29,9 @@ Pass : 123456789
 - EVERYTHING REAL TIME
 - Sign Out
 - AI Chat assistant
+
+## Video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nHWO_ke7ipg/0.jpg)](https://www.youtube.com/watch?v=nHWO_ke7ipg)
   
 
 
